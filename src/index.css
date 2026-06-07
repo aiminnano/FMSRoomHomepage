@@ -6,3 +6,23 @@
   --color-grey500: #a1a1a1;
   --color-grey800: #454545;
 }
+
+.nav-item{
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: white;
+  
+}
+
+.nav-item:hover::after {
+  width: 45%;
+}
