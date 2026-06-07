@@ -1,7 +1,7 @@
 import hamburger from '../../images/icon-hamburger.svg'
 import heroone from '../../images/mobile-image-hero-1.jpg'
 import close from '../../images/icon-close.svg'
-import arrow from '../../images/icon-arrow.svg'
+import Arrow from '../../images/icon-arrow.svg?react'
 import arrowleft from '../../images/icon-angle-left.svg'
 import arrowright from '../../images/icon-angle-right.svg'
 import hero1d from '../../images/desktop-image-hero-1.jpg'
@@ -44,12 +44,12 @@ function Header(){
                             </div>
                         </div>
                         <div className='hidden absolute lg:flex gap-14 items-center justify-center top-0 text-white p-15 pt-10 '>
-                            <div className='text-3xl'>room</div>
+                            <div className='text-3xl pb-1'>room</div>
                             <div className='flex items-center gap-7.5 font-medium'>
-                                <div>home</div>
-                                <div>shop</div>
-                                <div>about</div>
-                                <div>contact</div>
+                                <div className='nav-item cursor-pointer pb-1'>home</div>
+                                <div className='nav-item cursor-pointer pb-1'>shop</div>
+                                <div className='nav-item cursor-pointer pb-1'>about</div>
+                                <div className='nav-item cursor-pointer pb-1'>contact</div>
                             </div>
                         </div>
                         <div className='absolute right-0 bottom-0 z-5 bg-black flex items-center lg:hidden'>
@@ -59,15 +59,19 @@ function Header(){
                     </div>
 
                     
-                    <div className='p-8 flex flex-col items-start gap-8 mt-7 lg:max-w-[600px] lg:p-25'>
-                        <div className='flex flex-col gap-4 leading-[1.3]'>
+                    <div className='relative p-8 flex flex-col items-start gap-8 lg:gap-5 mt-7 lg:max-w-[600px] lg:p-25'>
+                        <div className='flex flex-col gap-4 lg:gap-6 leading-[1.3]'>
                             <div className='font-semibold tracking-tighter text-[2.55rem] leading-[.9] lg:text-[3.03rem]'>Discover innovative ways to decorate</div>
                             <div className='text-grey500 text-[15.5px] leading-[1.4]'>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in brinking your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</div>
                         </div>
 
-                        <div className='flex gap-4 items-center'>
-                            <div className='tracking-[.8rem] font-medium text-[15px] '>SHOP NOW </div>
-                            <img src={arrow} alt="arrow-icon" />
+                        <div className='group flex gap-4 items-center cursor-pointer'>
+                            <div className='tracking-[.8rem] font-medium text-[15px] cursor-pointer group-hover:text-grey500 '>SHOP NOW </div>
+                            <Arrow className='text-black group-hover:text-grey500' />
+                        </div>
+                        <div className='hidden lg:flex absolute left-0 bottom-0 z-5 bg-black flex items-center '>
+                            <button type="button" className='flex items-center justify-center w-[56px] h-[55px] lg:h-[78px] lg:w-[82px] hover:bg-grey800 cursor-pointer'><img src={arrowleft} className='w-[10px] lg:w-[14px]' alt="left-arrow-icon" /></button>
+                            <button type="button" className='flex items-center justify-center w-[56px] h-[55px] lg:h-[78px] lg:w-[82px] hover:bg-grey800 cursor-pointer'><img src={arrowright} className='w-[10px] lg:w-[14px]' alt="right-arrow-icon" /></button>
                         </div>    
                     </div>
 
