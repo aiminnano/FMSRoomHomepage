@@ -5,5 +5,6 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/FMSRoomHomepage/',
   plugins: [react(),tailwindcss(),svgr()],
 })
