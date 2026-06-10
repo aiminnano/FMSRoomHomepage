@@ -76,7 +76,7 @@ function Header(){
                     </div>
 
                     
-                    <div className='relative p-8 flex flex-col items-start gap-8 lg:gap-5 mt-7 lg:max-w-[600px] lg:p-25'>
+                    <div className='relative p-8 pb-17 flex flex-col items-start gap-8 lg:gap-5 mt-7 lg:max-w-[600px] lg:p-25 lg:pb-0'>
                         <div className='flex flex-col gap-4 lg:gap-6 leading-[1.3]'>
                             <div className='font-semibold tracking-tighter text-[2.55rem] leading-[.9] lg:text-[3.03rem]'>{features[count].title}</div>
                             <div className='text-grey500 text-[15.5px] leading-[1.4]'>{features[count].desc}</div>
