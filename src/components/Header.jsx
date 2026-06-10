@@ -9,6 +9,7 @@ import arrowright from '../../images/icon-angle-right.svg'
 import hero1d from '../../images/desktop-image-hero-1.jpg'
 import hero2d from '../../images/desktop-image-hero-2.jpg'
 import hero3d from '../../images/desktop-image-hero-3.jpg'
+import features from '../Features'
 
 import { useState } from 'react'
 
@@ -17,7 +18,7 @@ function Header(){
     const mobileImages = [heroone, herotwo, herothree]
     const [isOpen, setIsOpen] = useState(false);
     const [count, setCount] = useState(0);
-    const [fade, setFade] = useState(true)
+    const [fade, setFade] = useState(true);
 
     const prev = () => {
         setFade(false)
@@ -77,8 +78,8 @@ function Header(){
                     
                     <div className='relative p-8 flex flex-col items-start gap-8 lg:gap-5 mt-7 lg:max-w-[600px] lg:p-25'>
                         <div className='flex flex-col gap-4 lg:gap-6 leading-[1.3]'>
-                            <div className='font-semibold tracking-tighter text-[2.55rem] leading-[.9] lg:text-[3.03rem]'>Discover innovative ways to decorate</div>
-                            <div className='text-grey500 text-[15.5px] leading-[1.4]'>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in brinking your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</div>
+                            <div className='font-semibold tracking-tighter text-[2.55rem] leading-[.9] lg:text-[3.03rem]'>{features[count].title}</div>
+                            <div className='text-grey500 text-[15.5px] leading-[1.4]'>{features[count].desc}</div>
                         </div>
 
                         <div className='group flex gap-4 items-center cursor-pointer'>
